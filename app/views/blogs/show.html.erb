@@ -1,5 +1,19 @@
-<h2>ブログ詳細</h2>
-<p>タイトル: <%= @blog.title %></p>
-<p>内容: <%= @blog.content %></p>
-<%= link_to '編集', edit_blog_path(@blog.id) %>
-<%= link_to '削除', blog_path(@blog.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %>
+<h2 class="content-title">ブログ詳細</h2>
+<table class="table table-bordered">
+  <tr>
+    <th class="table-info">タイトル</th>
+    <td><%= @blog.title %></</td>
+  </tr>
+  <tr>
+    <th class="table-info">内容</th>
+    <td><%= @blog.content %></td>
+  </tr>
+  <tr>
+    <th class="table-info">投稿者</th>
+    <td><%= @blog.user.name %></td>
+  </tr>
+</table>
+<div class="content_link">
+  <%= link_to '編集', edit_blog_path(@blog.id), class: "btn btn-primary" %>
+  <%= link_to '削除', blog_path(@blog.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: "btn btn-danger" %>
+</div>
