@@ -1,3 +1,10 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  text-align: center;
+}
+h1 {
+  background: linear-gradient(transparent 70%, #a7d6ff 70%);
+}
+
+.row {
+  padding:10% 10%;
+}
