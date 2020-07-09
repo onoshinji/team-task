@@ -1,7 +1,9 @@
 <%= form_with(model: @blog, local: true) do |f| %>
-  <p><%= f.label :title %></p>
-  <p><%= f.text_field :title %></p>
-  <p><%= f.label :content %></p>
-  <p><%= f.text_field :content %></p>
+<p><%= f.label :title %></p>
+<p><%= f.text_field :title %></p>
+<p><%= f.label :content %></p>
+<p><%= f.text_field :content %></p>
+<button type="button" class="btn btn-primary">
   <%= f.submit %>
+</button>
 <% end %>
